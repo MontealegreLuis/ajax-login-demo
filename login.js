@@ -1,12 +1,4 @@
-var updateErrorMessage = function(message) {
-    var $errors = $('.errors');
-
-    if (0 === $errors.length) {
-        $errors = $('<p class="errors"></p>');
-        $('legend').after($errors);
-    }
-    $errors.text(message);
-};
+var $errors = $('.errors');
 
 $('#login-form').on('submit', function(e) {
     e.preventDefault();
@@ -19,12 +11,12 @@ $('#login-form').on('submit', function(e) {
             $('#login').attr('disabled', true).val('Processing...');
         },
         error: function(jqXHR, textStatus, errorThrown) {
-            updateErrorMessage('Somethig went wrong, please try again in a few minutes...');
+            $errors.text('Somethig went wrong, please try again in a few minutes...');
             $('#login').removeAttr('disabled').val('Login');
         },
         success: function(response) {
             if (response.error) {
-                updateErrorMessage(response.error);
+                $errors.text(response.error);
                 $('#login').removeAttr('disabled').val('Login');
             }
 
