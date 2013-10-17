@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ajax login demo</title>
+    </head>
+    <body>
+        <form method="post" action="authenticate.php" id="login-form">
+            <fieldset>
+                <legend>Login</legend>
+                <dl>
+                    <dt><label for="username">Username</label></dt>
+                    <dd><input type="text" name="username"></dd>
+                    <dt><label for="password">Password</label></dt>
+                    <dd><input type="password" name="password"></dd>
+                </dl>
+                <p><input type="submit" name="login" id="login" value="Login"></p>
+            </fieldset>
+        </form>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="login.js"></script>
+    </body>
+</html>
