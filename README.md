@@ -15,7 +15,7 @@ para hashing de contraseñas](http://mx2.php.net/manual/es/ref.password.php) de 
 [ajax](http://api.jquery.com/jQuery.ajax/) de jQuery. 
 
 En caso de no tener instalado PHP 5.5, se incluye la [librería de Anthony Ferrara para la 
-compatibilidad de la API de hashing](https://github.com/ircmaxell/password_compat) en versiones de 
+compatibilidad de la API de hashing](https://github.com/ircmaxell/password_compat) en versiones de
 PHP posteriores a 5.3.6. Este ejemplo requiere tener instalado PHP 5.4.
 
 Estos son los dos ejemplos de código que dieron origen a este repositorio:
@@ -39,4 +39,4 @@ Luego ejecuta el siguiente script que crea un usuario en la base de datos:
 
 Tienes todo listo para ejecutar el ejemplo:
 
-    http://localhost/ajax-demo-login/login.html
+    http://localhost/ajax-login-demo/login.html
