@@ -16,9 +16,27 @@ para hashing de contraseñas](http://mx2.php.net/manual/es/ref.password.php) de 
 
 En caso de no tener instalado PHP 5.5, se incluye la [librería de Anthony Ferrara para la 
 compatibilidad de la API de hashing](https://github.com/ircmaxell/password_compat) para versiones de 
-PHP posteriores a 5.3.6. El repositorio requiere tener instalado PHP 5.4. 
+PHP posteriores a 5.3.6. Este ejemplo requiere tener instalado PHP 5.4.
 
 Estos son los dos ejemplos de código que dieron origen a este repositorio:
 
 * [Post original](http://elpoli.delphiaccess.com/php-validar-usuario-y-contrasena-usando-ajax/)
 * [Respuesta al post original](http://www.phpmexico.com.mx/curso/examples/login_simple.php)
+
+Para correr el ejemplo, crea la base de datos y el usuario en MySQL:
+
+    DROP DATABASE IF EXISTS dbtest;
+
+    CREATE DATABASE dbtest
+    DEFAULT CHARACTER SET = utf8
+    COLLATE = utf8_general_ci;
+
+    GRANT ALL PRIVILEGES on dbtest.* TO test_user@localhost IDENTIFIED BY 't3st_us3r';
+
+Luego ejecuta el siguiente script que crea un usuario en la base de datos:
+
+    php setup-db.php
+
+Tienes todo listo para ejecutar el ejemplo:
+
+    http://localhost/ajax-demo-login/login.html

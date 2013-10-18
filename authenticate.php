@@ -9,6 +9,7 @@ if (empty($_POST['username']) || empty($_POST['password'])) {
     return;
 }
 
+// Filter user input
 $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
 $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
@@ -40,8 +41,9 @@ try {
 
     echo json_encode(['success' => true]);
 
-} catch(PDOException $e) {
+} catch (PDOException $e) {
 
+    // Log the exception and send the proper response code
     error_log("PDO Exception: \n{$e}\n");
     http_response_code(500);
 }
